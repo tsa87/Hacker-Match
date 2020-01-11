@@ -1,28 +1,28 @@
-import React from 'react'
-import {Button, View, StyleSheet, Text, TextInput} from 'react-native'
+import React from "react";
+import LoginScreen from "react-native-login-screen";
+import {View, Button, Text, ScrollView, StyleSheet, Switch} from 'react-native'
 
-export default class LoginScreen extends React.Component {
-  login = () => {
-    this.props.navigation.navigate('Login')
-  }
 
-  signup = () => {
-    this.props.navigation.navigate('SignUp')
-  }
+export default class LogInScreen extends React.Component {
+  static navigationOptions = {
+    title: 'LOGIN',
+    header: null
+  };
+
 
   render() {
     return (
-      <View style={styles.container}>
-        <Button title="Sign Up" onPress={this.signup}/>
-        <Button title="Log In" onPress={this.login}/>
-      </View>
-    )
+
+        <View style={{paddingBottom: 200}}>
+          <LoginScreen
+              onPressLogin={() => alert("The username and the password you entered does not match.")}
+              logoText="Hacker Match"
+              logoComponent={null}
+          />
+        </View>)
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    flex: 1,
-  }
-})
+
+
+
