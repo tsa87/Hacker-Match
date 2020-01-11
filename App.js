@@ -1,5 +1,10 @@
 import React from 'react';
 
+import LoginScreen from "./screens/LoginScreen"
+import SignUpScreen from "./screens/SignUpScreen"
+import SwipeScreen from "./screens/SwipeScreen"
+
+
 import {
   createSwitchNavigator,
   createAppContainer

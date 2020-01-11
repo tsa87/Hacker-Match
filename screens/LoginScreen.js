@@ -3,11 +3,11 @@ import {Button, View, StyleSheet, Text, TextInput} from 'react-native'
 
 export default class LoginScreen extends React.Component {
   login = () => {
-    this.props.navigation.navigate('SwipeScreen')
+    this.props.navigation.navigate('Login')
   }
 
   signup = () => {
-    this.props.navigation.navigate('SignUpScreen')
+    this.props.navigation.navigate('SignUp')
   }
 
   render() {
