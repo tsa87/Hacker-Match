@@ -20,6 +20,47 @@ const ICON_FONT = "tinderclone";
 const DIMENSION_WIDTH = Dimensions.get("window").width;
 const DIMENSION_HEIGHT = Dimensions.get("window").height;
 
+const AppStyles = {
+  color: {
+    main: "#5ea23a",
+    text: "#696969",
+    title: "#464646",
+    subtitle: "#545454",
+    categoryTitle: "#161616",
+    tint: "#5d5aff",
+    description: "#bbbbbb",
+    filterTitle: "#8a8a8a",
+    starRating: "#2bdf85",
+    location: "#a9a9a9",
+    white: "white",
+    facebook: "#4267b2",
+    grey: "grey",
+    greenBlue: "#00aea8",
+    placeholder: "#a0a0a0",
+    background: "#f2f2f2",
+    blue: "#3293fe"
+  },
+  fontSize: {
+    title: 35,
+    content: 20,
+    normal: 16
+  },
+  buttonWidth: {
+    main: "70%"
+  },
+  textInputWidth: {
+    main: "80%"
+  },
+  fontName: {
+    main: "Noto Sans",
+    bold: "Noto Sans"
+  },
+  borderRadius: {
+    main: 25,
+    small: 5
+  }
+};
+
 export default StyleSheet.create({
 	// COMPONENT - CARD ITEM
 	containerCardItem: {
@@ -30,13 +71,15 @@ export default StyleSheet.create({
 		shadowOpacity: 0.05,
 		shadowRadius: 10,
 		shadowColor: BLACK,
-		shadowOffset: { height: 0, width: 0 }
+		shadowOffset: { height: 0, width: 0 },
+    width: DIMENSION_WIDTH * 0.8,
+    height: DIMENSION_HEIGHT * 0.8
 	},
 	matchesCardItem: {
 		marginTop: -35,
 		backgroundColor: PRIMARY_COLOR,
 		paddingVertical: 7,
-		paddingHorizontal: 20,
+		paddingHorizontal: 10,
 		borderRadius: 20
 	},
 	matchesTextCardItem: {
@@ -73,7 +116,9 @@ export default StyleSheet.create({
 	actionsCardItem: {
 		flexDirection: "row",
 		alignItems: "center",
-		paddingVertical: 30
+    justifyContent: "center",
+		paddingVertical: 30,
+    paddingHorizontal: 40
 	},
 	button: {
 		width: 60,
@@ -255,7 +300,13 @@ export default StyleSheet.create({
 	},
 
 	// CONTAINER - HOME
-	containerHome: { marginHorizontal: 10 },
+	containerHome: { 
+    paddingTop: 50,
+		marginHorizontal: 10,
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignItems: "center"
+  },
 
 	// CONTAINER - MATCHES
 	containerMatches: {
@@ -338,5 +389,21 @@ export default StyleSheet.create({
 		fontFamily: ICON_FONT,
 		height: 20,
 		paddingBottom: 7
-	}
+	},
+   signupText: {
+    color: 'white',
+    fontSize: 10,
+  },
+  skillContainer: {
+    width: AppStyles.buttonWidth.main / 4,
+    backgroundColor: AppStyles.color.tint,
+    borderRadius: AppStyles.borderRadius.main,
+    padding: 10,
+    marginTop: 10,
+    marginRight: 20,
+  },
+  fixToText: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 });

@@ -4,17 +4,30 @@ import SignInScreen from "./screens/SignInScreen"
 import SignUpScreen from "./screens/SignUpScreen"
 import SwipeScreen from "./screens/SwipeScreen"
 import WelcomeScreen from "./screens/WelcomeScreen"
+import MatchScreen from "./screens/MatchScreen"
+
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import {
   createSwitchNavigator,
   createAppContainer
 } from 'react-navigation';
 
+const MainTab = createBottomTabNavigator(
+  {
+    Match: MatchScreen,
+    Swipe: SwipeScreen,
+  },
+  {
+    initialRouteName: "Swipe",
+  }
+)
+
 const MainSwitch = createSwitchNavigator(
   {
     SignIn: SignInScreen,
     SignUp: SignUpScreen,
-    Swipe: SwipeScreen,
+    Main: MainTab,
     Welcome: WelcomeScreen,
   },
   {

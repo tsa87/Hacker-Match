@@ -8,6 +8,7 @@ module.exports = [
 			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
 		message:
 			'I will go back to Gotham and I will fight men Iike this but I will not become an executioner.',
+    skills: ["Python", "Java"],
 		image: require('../images/01.jpg')
 	},
 	{
@@ -18,6 +19,7 @@ module.exports = [
 			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
 		status: 'Offline',
 		message: "Someone like you. Someone who'll rattle the cages.",
+    skills: ["Python", "Java"],
 		image: require('../images/02.jpg')
 	},
 	{
@@ -29,6 +31,7 @@ module.exports = [
 		status: 'Offline',
 		message:
 			'Oh, hee-hee, aha. Ha, ooh, hee, ha-ha, ha-ha. And I thought my jokes were bad.',
+    skills: ["Python", "Java"],
 		image: require('../images/03.jpg')
 	},
 	{
@@ -39,6 +42,7 @@ module.exports = [
 			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
 		status: 'Online',
 		message: "Bats frighten me. It's time my enemies shared my dread.",
+    skills: ["Python", "Java"],
 		image: require('../images/04.jpg')
 	},
 	{
@@ -49,6 +53,7 @@ module.exports = [
 			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
 		status: 'Offline',
 		message: "It's not who I am underneath but what I do that defines me.",
+    skills: ["Python", "Java"],
 		image: require('../images/05.jpg')
 	},
 	{
@@ -60,6 +65,7 @@ module.exports = [
 		status: 'Online',
 		message:
 			'You have nothing, nothing to threaten me with. Nothing to do with all your strength.',
+    skills: ["Python", "Java"],
 		image: require('../images/06.jpg')
 	},
 	{
@@ -71,6 +77,7 @@ module.exports = [
 		status: 'Online',
 		message:
 			"Never start with the head. The victim gets all fuzzy. He can't feel the next... See?",
+    skills: ["Python", "Java"],
 		image: require('../images/07.jpg')
 	},
 	{
@@ -88,6 +95,7 @@ module.exports = [
 		status: 'Online',
 		message:
 			"And as for the television's so-called plan, Batman has no jurisdiction.",
+    skills: ["Python", "Java"],
 		image: require('../images/08.jpg')
 	},
 	{
@@ -99,6 +107,7 @@ module.exports = [
 		status: 'Online',
 		message:
 			'This is what happens when an unstoppable force meets an immovable object.',
+    skills: ["Python", "Java"],
 		image: require('../images/09.jpg')
 	},
 	{
@@ -110,6 +119,7 @@ module.exports = [
 		status: 'Offline',
 		message:
 			'You want order in Gotham. Batman must take off his mask and turn himself in.',
+    skills: ["Python", "Java"],
 		image: require('../images/10.jpg')
 	}
 ];

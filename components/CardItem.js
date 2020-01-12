@@ -1,9 +1,51 @@
 import React from 'react';
 import styles from '../assets/styles';
 
-import { Text, View, Image, Dimensions, TouchableOpacity } from 'react-native';
-
+import { Button, StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from 'react-native';
+import Constants from 'expo-constants';
 import Emoji from 'react-native-emoji';
+
+const AppStyles = {
+  color: {
+    main: "#5ea23a",
+    text: "#696969",
+    title: "#464646",
+    subtitle: "#545454",
+    categoryTitle: "#161616",
+    tint: "#5d5aff",
+    description: "#bbbbbb",
+    filterTitle: "#8a8a8a",
+    starRating: "#2bdf85",
+    location: "#a9a9a9",
+    white: "white",
+    facebook: "#4267b2",
+    grey: "grey",
+    greenBlue: "#00aea8",
+    placeholder: "#a0a0a0",
+    background: "#f2f2f2",
+    blue: "#3293fe"
+  },
+  fontSize: {
+    title: 35,
+    content: 20,
+    normal: 16
+  },
+  buttonWidth: {
+    main: "70%"
+  },
+  textInputWidth: {
+    main: "80%"
+  },
+  fontName: {
+    main: "Noto Sans",
+    bold: "Noto Sans"
+  },
+  borderRadius: {
+    main: 25,
+    small: 5
+  }
+};
+
 
 const CardItem = ({
   actions,
@@ -11,6 +53,7 @@ const CardItem = ({
   image,
   matches,
   name,
+  skills,
   onPressLeft,
   onPressRight,
   status,
@@ -21,9 +64,9 @@ const CardItem = ({
   const imageStyle = [
     {
       borderRadius: 8,
-      width: variant ? fullWidth / 2 - 30 : fullWidth - 80,
-      height: variant ? 170 : 350,
-      margin: variant ? 0 : 20
+      width: fullWidth / 2 - 30,
+      height: fullWidth / 2 - 30,
+      margin: 10
     }
   ];
 
@@ -53,6 +96,18 @@ const CardItem = ({
       {/* NAME */}
       <Text style={nameStyle}>{name}</Text>
 
+      {/*SKILLS*/}
+      <View style={localStyles.container}>
+        <View style={localStyles.fixToText}>
+          { skills.map((item) => (
+            <Text style={localStyles.signupText}>
+              {item}
+              <Emoji name="white_check_mark" style={{ fontSize: 15 }} />
+            </Text>
+          ))}
+        </View>
+      </View>
+
       {/* DESCRIPTION */}
       {description && (
         <Text style={styles.descriptionCardItem}>{description}</Text>
@@ -69,15 +124,9 @@ const CardItem = ({
       {/* ACTIONS */}
       {actions && (
         <View style={styles.actionsCardItem}>
-          <TouchableOpacity style={styles.miniButton}>
-            <Text style={styles.star}>
-              Star
-            </Text>
-          </TouchableOpacity>
-
           <TouchableOpacity style={styles.button} onPress={() => onPressLeft()}>
             <Text style={styles.like}>
-              Like
+              <Emoji name="heart" style={{fontSize: 30}} />
             </Text>
           </TouchableOpacity>
 
@@ -86,13 +135,7 @@ const CardItem = ({
             onPress={() => onPressRight()}
           >
             <Text style={styles.dislike}>
-              Dislke
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.miniButton}>
-            <Text style={styles.flash}>
-              Flash
+              <Emoji name="negative_squared_cross_mark" style={{fontSize: 30}} />
             </Text>
           </TouchableOpacity>
         </View>
@@ -100,5 +143,26 @@ const CardItem = ({
     </View>
   );
 };
+
+const localStyles = StyleSheet.create({
+  fixToText: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: AppStyles.buttonWidth.main / 4,
+    backgroundColor: AppStyles.color.tint,
+    borderRadius: AppStyles.borderRadius.main,
+    padding: 10,
+    marginTop: 10,
+    marginRight: 20,
+  },
+  signupText: {
+    color: "white"
+  },
+  container: {
+    flex: 1,
+    marginTop: Constants.statusBarHeight,
+    marginHorizontal: 16,
+  },
+})
 
 export default CardItem;
