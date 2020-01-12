@@ -8,7 +8,7 @@ module.exports = [
 		status: 'Offline',
 		message: "It's not who I am underneath but what I do that defines me.",
     skills: ["Javascript", "React Native"],
-		image: require('../images/.jpg')
+		image: require('../images/girl_ocean.jpg')
 	},
 	{
 		id: 2,
