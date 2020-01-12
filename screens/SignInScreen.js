@@ -3,8 +3,10 @@ import LoginScreen from "react-native-login-screen";
 import {View, Button, Text, ScrollView, StyleSheet, Switch} from 'react-native'
 
 
-export default class SignInScreen extends React.Component {
+const passwordAnswer = "Augustine supreme"
 
+
+export default class SignInScreen extends React.Component {
 
     state = {
         username: "",
@@ -17,15 +19,19 @@ export default class SignInScreen extends React.Component {
     };
 
     handleUserNameChange = (username) => {
-      this.setState({username})
+        this.setState({username})
     }
 
     handlePasswordChange = (password) => {
-      this.setState({password})
+        this.setState({password})
     }
 
     login = () => {
-      this.props.navigation.navigate("Swipe")
+        if (this.state.password === passwordAnswer) {
+            this.props.navigation.navigate("Swipe")
+        } else {
+            alert("Wrong password!")
+        }
     }
 
     render() {
@@ -42,7 +48,6 @@ export default class SignInScreen extends React.Component {
                     onPressSettings={() => alert("U wanna sign up na")}
                     onPressLogin={this.login}
                     logoText="Hacker Match"
-                    logoComponent={null}
                     loginButtonBackgroundColor="#21a2f6"
                 />
             </View>)
