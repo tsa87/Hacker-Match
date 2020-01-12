@@ -1,9 +1,19 @@
 import React from 'react';
 import styles from '../assets/styles';
 
-import { Button, StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from 'react-native';
-import Constants from 'expo-constants';
-import Emoji from 'react-native-emoji';
+import {
+  Button,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+  Linking
+} from "react-native";
+import Constants from "expo-constants";
+import Emoji from "react-native-emoji";
+import Icon from "react-native-vector-icons";
 
 const AppStyles = {
   color: {
@@ -107,6 +117,22 @@ const CardItem = ({
           ))}
         </View>
       </View>
+      <View style={localStyles.container}>
+        <Text />
+      </View>
+      <View>
+        <TouchableOpacity onPress={() => Linking.openURL("http://github.com")}>
+          <SocialIcon button light type="github" style={styles.button} />
+        </TouchableOpacity>
+      </View>
+
+      <View>
+        <TouchableOpacity
+          onPress={() => Linking.openURL("http://linkedin.com")}
+        >
+          <SocialIcon button light type="linkedin" style={styles.button} />
+        </TouchableOpacity>
+      </View>
 
       {/* DESCRIPTION */}
       {description && (
@@ -156,6 +182,8 @@ const localStyles = StyleSheet.create({
   },
   signupText: {
     color: "white"
+    // paddingBottom: 10,
+    // marginBottom:10,
   },
   container: {
     flex: 1,
