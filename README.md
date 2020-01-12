@@ -1,9 +1,9 @@
 # Hacker Match - 'Find your perfect hacking partner.'
 
 ## What are you waiting for? Your new hacking partner is just a swipe away! 
-Have you ever wanted to work on a specific project for a hackathon, but had difficulty finding teammates with the right skills and experience? Worry no more, Hacker Match is here. Through its simple user-friendly interface, Hacker Match allows Hackers to match with new teammates with just a swipe! <br/> <br/> 
+Have you ever wanted to work on a specific project for a hackathon, but had difficulty finding teammates with the right skills and experience? Worry no more, Hacker Match is here. Through its simple user-friendly interface, Hacker Match allows Hackers to match with new teammates with just a swipe! <br/>  
 
-Better yet, the application is developed using React Native and runs on both ios and Android. <br/> <br/> 
+Better yet, the application is developed using React Native and runs on both ios and Android. <br/> 
 
 (This app was developed during NWHacks 2020 held at The University of British Columbia. The app utilizes a sample database of users for demonstration purposes.)
 
