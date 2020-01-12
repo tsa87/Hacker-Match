@@ -5,16 +5,10 @@ import {View, Button, Text, ScrollView, StyleSheet, Switch} from 'react-native'
 
 export default class SignInScreen extends React.Component {
 
-
     state = {
-        username: "",
-        password: ""
+      username: "",
+      password: "",
     }
-
-    static navigationOptions = {
-        title: 'LOGIN',
-        header: null
-    };
 
     handleUserNameChange = (username) => {
       this.setState({username})
@@ -25,25 +19,30 @@ export default class SignInScreen extends React.Component {
     }
 
     login = () => {
-      this.props.navigation.navigate("Swipe")
+      if (this.props.screenProps.userExists){
+        if (this.state.username === this.props.navigate.getParams('userName')
+         && this.state.password === this.props.navigate.getParams('passWord') ){
+          this.props.navigation.navigate("Swipe")
+         }
+        else {
+          alert("Sorry! Wrong Password or Username.")
+        }
+      }
+      else {
+        alert("Please sign up first :)")
+        setTimeout(() => this.props.navigation.navigate("SignUp"), 1000)
+      }
     }
 
     render() {
         return (
             <View style={{paddingBottom: 200}}>
                 <LoginScreen
-                    source={{
-                        uri: { backgroundColor: '#0000FF' }
-                    }}
-
                     usernameOnChangeText={(username) => this.handleUserNameChange(username)}
-
                     passwordOnChangeText={(password) => this.handlePasswordChange(password)}
                     onPressSettings={() => alert("U wanna sign up na")}
                     onPressLogin={this.login}
                     logoText="Hacker Match"
-                    logoComponent={null}
-                    loginButtonBackgroundColor="#21a2f6"
                 />
             </View>)
     }
