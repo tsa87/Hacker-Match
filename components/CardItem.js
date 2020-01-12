@@ -14,6 +14,7 @@ import {
 import Constants from "expo-constants";
 import Emoji from "react-native-emoji";
 import Icon from "react-native-vector-icons";
+import { SocialIcon } from 'react-native-elements'
 
 const AppStyles = {
   color: {
