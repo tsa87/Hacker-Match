@@ -11,4 +11,4 @@
 
 ## Contributors
 
-**Tony She, Augustine Jeong, Trevor Flanigan, Joey Shi**
+**Tony Shen, Augustine Jeong, Trevor Flanigan, Joey Shi**
