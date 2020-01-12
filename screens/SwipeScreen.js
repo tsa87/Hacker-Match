@@ -1,32 +1,31 @@
 import React from 'react';
-import { Dimensions, View, ImageBackground } from 'react-native';
+import { Dimensions, View, ImageBackground, StyleSheet } from 'react-native';
 import CardStack, { Card } from 'react-native-card-stack-swiper';
 
 import Demo from '../assets/data/demo.js';
 
 export default class SwipeScreen extends React.Component  {
-  return (
-    <ImageBackground
-      source={require('../assets/images/bg.png')}
-      style={styles.bg}
-    >
-      <View style={styles.containerHome}>
-        <CardStack
-          loop={true}
-          verticalSwipe={false}
-          renderNoMoreCards={() => null}
-          ref={swiper => (this.swiper = swiper)}
-        >
-          {Demo.map((item, index) => (
-            <Card key={index}>
-      
-            </Card>
-          ))}
-        </CardStack>
-      </View>
-    </ImageBackground>
-  );
-};
+  
+  render() {
+    return (
+      <ImageBackground
+        source={require('../assets/images/bg.png')}
+        style={styles.bg}
+      >
+        <View style={styles.containerHome}>
+          <CardStack
+            loop={true}
+            verticalSwipe={false}
+            renderNoMoreCards={() => null}
+            ref={swiper => (this.swiper = swiper)}
+          >
+            
+          </CardStack>
+        </View>
+      </ImageBackground>
+    )
+  } 
+}
 
 const styles = StyleSheet.create({
   bg: {
@@ -47,5 +46,3 @@ const styles = StyleSheet.create({
   },
 })
 
-
-export default Home;
