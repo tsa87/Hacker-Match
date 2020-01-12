@@ -4,8 +4,7 @@ import SignInScreen from "./screens/SignInScreen"
 import SignUpScreen from "./screens/SignUpScreen"
 import SwipeScreen from "./screens/SwipeScreen"
 import StartScreen from "./screens/StartScreen"
-
-
+import FormScreen from "./screens/Form"
 
 import {
     createSwitchNavigator,
@@ -17,7 +16,8 @@ const MainSwitch = createSwitchNavigator(
         Login: SignInScreen,
         SignUp: SignUpScreen,
         Swipe: SwipeScreen,
-        Start: StartScreen
+        Start: StartScreen,
+        Form: FormScreen
     },
     {
         initialRouteName: "Start",
