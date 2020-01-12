@@ -3,9 +3,9 @@ Have you ever wanted to work on a specific project for a hackathon, but had diff
 
 Better yet, the application is developed using React Native and runs on both ios and Android. <br/> <br/> 
 
-## What are you waiting for? Your new hacking partner is just a swipe away! <br/ >
-<br/ >
-<br/ >
+## What are you waiting for? Your new hacking partner is just a swipe away! <br/>
+<br/>
+<br/>
 (This app was developed during NWHacks 2020 held at The University of British Columbia. The app utilizes a sample database of users for demonstration purposes.)
 
 ## Screenshots 
