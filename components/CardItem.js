@@ -121,19 +121,18 @@ const CardItem = ({
       <View style={localStyles.container}>
         <Text />
       </View>
-      <View>
+      <View style={localStyles.linkButtons}>
         <TouchableOpacity onPress={() => Linking.openURL("http://github.com")}>
           <SocialIcon button light type="github" style={styles.button} />
         </TouchableOpacity>
-      </View>
-
-      <View>
         <TouchableOpacity
           onPress={() => Linking.openURL("http://linkedin.com")}
         >
           <SocialIcon button light type="linkedin" style={styles.button} />
         </TouchableOpacity>
       </View>
+
+      <View></View>
 
       {/* DESCRIPTION */}
       {description && (
@@ -180,6 +179,9 @@ const localStyles = StyleSheet.create({
     borderRadius: AppStyles.borderRadius.main,
     padding: 5,
     marginRight: 20,
+  },
+  linkButtons: {
+    flexDirection: "row"
   },
   signupText: {
     color: "white"
