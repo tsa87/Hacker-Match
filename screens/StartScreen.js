@@ -37,7 +37,7 @@ export default class StartScreen extends React.Component {
                 />
                 <Button style={styles.margin}
                         type="outline"
-                        onPress={() => alert("yeet")}
+                        onPress={() => this.props.navigation.navigate('Form')}
                         title="New? Sign up now"
                 />
             </View>)
