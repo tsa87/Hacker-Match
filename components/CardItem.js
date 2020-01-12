@@ -64,7 +64,7 @@ const CardItem = ({
   const imageStyle = [
     {
       borderRadius: 8,
-      width: fullWidth / 2 - 30,
+      width: fullWidth / 2 -30,
       height: fullWidth / 2 - 30,
       margin: 10
     }
@@ -151,8 +151,8 @@ const localStyles = StyleSheet.create({
     width: AppStyles.buttonWidth.main / 4,
     backgroundColor: AppStyles.color.tint,
     borderRadius: AppStyles.borderRadius.main,
-    padding: 10,
-    marginTop: 10,
+    padding: 5,
+    marginTop: 0,
     marginRight: 20,
   },
   signupText: {
@@ -160,7 +160,7 @@ const localStyles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    marginTop: Constants.statusBarHeight,
+    marginTop: 5,
     marginHorizontal: 16,
   },
 })

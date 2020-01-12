@@ -1,11 +1,11 @@
 module.exports = [
 	{
 		id: 1,
-		name: 'Leanne Graham',
+		name: 'Joey Shi',
 		status: 'Online',
 		match: '78',
 		description:
-			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
+			'Second-year student at UBC, Computer Scientist, Mathematician',
 		message:
 			'I will go back to Gotham and I will fight men Iike this but I will not become an executioner.',
     skills: ["Python", "Java"],
@@ -13,18 +13,18 @@ module.exports = [
 	},
 	{
 		id: 2,
-		name: 'Clementine Bauch',
+		name: 'Tony Shen',
 		match: '93',
 		description:
-			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
+			'i lik bookes!!',
 		status: 'Offline',
 		message: "Someone like you. Someone who'll rattle the cages.",
-    skills: ["Python", "Java"],
+    skills: [],
 		image: require('../images/02.jpg')
 	},
 	{
 		id: 3,
-		name: 'Ervin Howell',
+		name: 'Mr. Krabs',
 		match: '45',
 		description:
 			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
@@ -36,7 +36,7 @@ module.exports = [
 	},
 	{
 		id: 4,
-		name: 'John Lebsack',
+		name: '',
 		match: '88',
 		description:
 			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',

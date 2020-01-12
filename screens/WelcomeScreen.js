@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "react-native-button";
-import { Text, View, StyleSheet } from "react-native";
+import { Image, Text, View, StyleSheet } from "react-native";
 import { AppStyles } from "../AppStyles";
 import { AsyncStorage, ActivityIndicator } from "react-native";
 
@@ -16,7 +16,7 @@ class WelcomeScreen extends React.Component {
     return (
 
       <View style={styles.container}>
-      
+        <Image style={{height: 200, width:200}} source={require('../assets/logo.png')} />
         <Text style={styles.title}>
           Let's get hacking
           <Emoji name="muscle" style={{ fontSize: 30 }} />
