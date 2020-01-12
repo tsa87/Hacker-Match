@@ -58,17 +58,17 @@ const AppStyles = {
 };
 
 const CardItem = ({
-  actions,
-  description,
-  image,
-  matches,
-  name,
-  skills,
-  onPressLeft,
-  onPressRight,
-  status,
-  variant,
-}) => {
+                    actions,
+                    description,
+                    image,
+                    matches,
+                    name,
+                    skills,
+                    onPressLeft,
+                    onPressRight,
+                    status,
+                    variant,
+                  }) => {
   // Custom styling
   const fullWidth = Dimensions.get('window').width;
   const imageStyle = [
@@ -90,59 +90,59 @@ const CardItem = ({
   ];
 
   return (
-    <View style={localStyles.containerCardItem}>
-      {/* IMAGE */}
-      <Image source={image} style={imageStyle} />
+      <View style={localStyles.containerCardItem}>
+        {/* IMAGE */}
+        <Image source={image} style={imageStyle} />
 
-      {/* MATCHES */}
-      {matches && (
-        <View style={styles.matchesCardItem}>
-          <Text style={styles.matchesTextCardItem}>
-            <Emoji name="coffee" style={{ fontSize: 25 }} /> {matches}% Match!
-          </Text>
+        {/* MATCHES */}
+        {matches && (
+            <View style={styles.matchesCardItem}>
+              <Text style={styles.matchesTextCardItem}>
+                <Emoji name="coffee" style={{ fontSize: 25 }} /> {matches}% Match!
+              </Text>
+            </View>
+        )}
+
+        {/* NAME */}
+        <Text style={nameStyle}>{name}</Text>
+
+        {/*SKILLS*/}
+        <View style={localStyles.skills}>
+          {skills.map(item => (
+              <View style={localStyles.fixToText}>
+                <Text style={localStyles.signupText}>
+                  {item}
+                  <Emoji name="white_check_mark" style={{ fontSize: 15 }} />
+                </Text>
+              </View>
+          ))}
         </View>
-      )}
 
-      {/* NAME */}
-      <Text style={nameStyle}>{name}</Text>
+        {/* DESCRIPTION */}
+        {description && (
+            <Text style={styles.descriptionCardItem}>{description}</Text>
+        )}
 
-      {/*SKILLS*/}
-      <View style={localStyles.skills}>
-        {skills.map(item => (
-          <View style={localStyles.fixToText}>
-            <Text style={localStyles.signupText}>
-              {item}
-              <Emoji name="white_check_mark" style={{ fontSize: 15 }} />
-            </Text>
-          </View>
-        ))}
-      </View>
-
-      {/* DESCRIPTION */}
-      {description && (
-        <Text style={styles.descriptionCardItem}>{description}</Text>
-      )}
-
-      <View style={localStyles.linkButtons}>
-        <TouchableOpacity onPress={() => Linking.openURL('http://github.com')}>
-          <SocialIcon button light type="github" style={styles.button} />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => Linking.openURL('http://linkedin.com')}>
-          <SocialIcon button light type="linkedin" style={styles.button} />
-        </TouchableOpacity>
-      </View>
-
-      <View />
-
-      {/* STATUS */}
-      {status && (
-        <View style={styles.status}>
-          <View style={status === 'Online' ? styles.online : styles.offline} />
-          <Text style={styles.statusText}>{status}</Text>
+        <View style={localStyles.linkButtons}>
+          <TouchableOpacity onPress={() => Linking.openURL('http://github.com')}>
+            <SocialIcon button light type="github" style={styles.button} />
+          </TouchableOpacity>
+          <TouchableOpacity
+              onPress={() => Linking.openURL('http://linkedin.com')}>
+            <SocialIcon button light type="linkedin" style={styles.button} />
+          </TouchableOpacity>
         </View>
-      )}
-    </View>
+
+        <View />
+
+        {/* STATUS */}
+        {status && (
+            <View style={styles.status}>
+              <View style={status === 'Online' ? styles.online : styles.offline} />
+              <Text style={styles.statusText}>{status}</Text>
+            </View>
+        )}
+      </View>
   );
 };
 
@@ -179,7 +179,7 @@ const localStyles = StyleSheet.create({
     shadowRadius: 10,
     shadowColor: 'black',
     shadowOffset: { height: 0, width: 0 },
-    width: Dimensions.get("window").width * 0.8,
+    width: Dimensions.get("window").width * 0.9,
     height: Dimensions.get("window").height * 0.8,
   },
 });
