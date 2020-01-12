@@ -8,7 +8,7 @@ import {
   ScrollView
 } from 'react-native'
 
-export default class SignUp extends React.Component {
+export default class FormScreen extends React.Component {
   state = {
     firstName: '', lastName: '', career: '', location: '', gitLink: '', resumeLink: '', linkedinLink: ''
   }
@@ -18,9 +18,9 @@ export default class SignUp extends React.Component {
   signUp = async () => {
     const { firstName, lastName, career, location, gitLink, resumeLink, linkedinLink } = this.state
     if (firstName != '' && lastName != '' && career != '' && location != '') {
-      alert(firstName + lastName + career + location +  gitLink + resumeLink + linkedinLink)
+      this.props.navigation.navigate('User', { firstName, lastName, career, location, gitLink, resumeLink, linkedinLink });
     } else {
-      alert('error signing up')
+      alert('error signing up');
     }
   }
  

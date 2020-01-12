@@ -6,6 +6,7 @@ export default class SignUpScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Text>To be made...</Text>
+        <Button> sdskdskmdskmdks </Button>
       </View>
     )
   }
@@ -16,4 +17,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
   }
-})
+});
