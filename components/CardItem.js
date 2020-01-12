@@ -9,7 +9,8 @@ import {
   View,
   Image,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  Linking
 } from "react-native";
 import Constants from "expo-constants";
 import Emoji from "react-native-emoji";
@@ -120,13 +121,15 @@ const CardItem = ({
         <Text />
       </View>
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL("http://github.com")}>
           <SocialIcon button light type="github" style={styles.button} />
         </TouchableOpacity>
       </View>
 
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL("http://linkedin.com")}
+        >
           <SocialIcon button light type="linkedin" style={styles.button} />
         </TouchableOpacity>
       </View>
@@ -181,6 +184,8 @@ const localStyles = StyleSheet.create({
   },
   signupText: {
     color: "white"
+    // paddingBottom: 10,
+    // marginBottom:10,
   },
   container: {
     flex: 1,
