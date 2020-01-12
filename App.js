@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoginScreen from "./screens/LoginScreen"
+import SignInScreen from "./screens/SignInScreen"
 import SignUpScreen from "./screens/SignUpScreen"
 import SwipeScreen from "./screens/SwipeScreen"
 
@@ -12,7 +12,7 @@ import {
 
 const MainSwitch = createSwitchNavigator(
   {
-    Login: LoginScreen,
+    Login: SignInScreen,
     SignUp: SignUpScreen,
     Swipe: SwipeScreen,
   },
