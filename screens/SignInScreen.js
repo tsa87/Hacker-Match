@@ -3,7 +3,7 @@ import LoginScreen from "react-native-login-screen";
 import {View, Button, Text, ScrollView, StyleSheet, Switch} from 'react-native'
 
 
-const passwordAnswer = "Augustine supreme"
+const passwordAnswer = "banana";
 
 
 export default class SignInScreen extends React.Component {
