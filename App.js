@@ -6,6 +6,8 @@ import SwipeScreen from "./screens/SwipeScreen"
 import WelcomeScreen from "./screens/WelcomeScreen"
 import MatchScreen from "./screens/MatchScreen"
 
+import Ionicons from "react-native-vector-icons/Ionicons";
+
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import {
@@ -13,10 +15,44 @@ import {
   createAppContainer
 } from 'react-navigation';
 
+const MatchSwitch = createSwitchNavigator(
+  {
+    Match: MatchScreen
+  },
+  {
+    navigationOptions: {
+      tabBarIcon: ({ focused, tintColor }) => (
+        <Ionicons
+          name={`ios-contacts`}
+          size={25}
+          color={tintColor}
+        />
+      )
+    }
+  }
+)
+
+const SwipeSwitch = createSwitchNavigator(
+  {
+    Swipe: SwipeScreen
+  },
+  {
+    navigationOptions: {
+      tabBarIcon: ({ focused, tintColor }) => (
+        <Ionicons
+          name={`ios-swap`}
+          size={25}
+          color={tintColor}
+        />
+      )
+    }
+  }
+)
+
 const MainTab = createBottomTabNavigator(
   {
-    Match: MatchScreen,
-    Swipe: SwipeScreen,
+    Match: MatchSwitch,
+    Swipe: SwipeSwitch,
   },
   {
     initialRouteName: "Swipe",

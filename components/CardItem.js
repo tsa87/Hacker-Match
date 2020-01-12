@@ -117,9 +117,6 @@ const CardItem = ({
           </View>
         ))}
       </View>
-      <View style={localStyles.container}>
-        <Text />
-      </View>
 
       {/* DESCRIPTION */}
       {description && (
@@ -167,14 +164,10 @@ const localStyles = StyleSheet.create({
     // paddingBottom: 10,
     // marginBottom:10,
   },
-  container: {
-    flex: 1,
-    marginTop: 5,
-    marginHorizontal: 16,
-  },
   skills: {
     flexDirection: "row",
     marginTop: 5,
+    marginBottom: 20,
     marginHorizontal: 16,
   },
   containerCardItem: {
@@ -186,8 +179,8 @@ const localStyles = StyleSheet.create({
     shadowRadius: 10,
     shadowColor: 'black',
     shadowOffset: { height: 0, width: 0 },
-    width: 370,
-    height: 750,
+    width: Dimensions.get("window").width * 0.8,
+    height: Dimensions.get("window").height * 0.8,
   },
 });
 
