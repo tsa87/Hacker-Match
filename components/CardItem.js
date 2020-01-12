@@ -1,19 +1,9 @@
-import React from "react";
-import styles from "../assets/styles";
-import { SocialIcon } from "react-native-elements";
+import React from 'react';
+import styles from '../assets/styles';
 
-import {
-  Button,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Dimensions,
-  TouchableOpacity
-} from "react-native";
-import Constants from "expo-constants";
-import Emoji from "react-native-emoji";
-import Icon from "react-native-vector-icons";
+import { Button, StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from 'react-native';
+import Constants from 'expo-constants';
+import Emoji from 'react-native-emoji';
 
 const AppStyles = {
   color: {
@@ -56,6 +46,7 @@ const AppStyles = {
   }
 };
 
+
 const CardItem = ({
   actions,
   description,
@@ -69,11 +60,11 @@ const CardItem = ({
   variant
 }) => {
   // Custom styling
-  const fullWidth = Dimensions.get("window").width;
+  const fullWidth = Dimensions.get('window').width;
   const imageStyle = [
     {
       borderRadius: 8,
-      width: fullWidth / 2 - 30,
+      width: fullWidth / 2 -30,
       height: fullWidth / 2 - 30,
       margin: 10
     }
@@ -83,13 +74,13 @@ const CardItem = ({
     {
       paddingTop: variant ? 10 : 15,
       paddingBottom: variant ? 5 : 7,
-      color: "#363636",
+      color: '#363636',
       fontSize: variant ? 15 : 30
     }
   ];
 
   return (
-    <View style={styles.containerCardItem}>
+    <View style={localStyles.containerCardItem}>
       {/* IMAGE */}
       <Image source={image} style={imageStyle} />
 
@@ -97,7 +88,7 @@ const CardItem = ({
       {matches && (
         <View style={styles.matchesCardItem}>
           <Text style={styles.matchesTextCardItem}>
-            <Emoji name="coffee" style={{ fontSize: 25 }} /> {matches}% Match!
+            <Emoji name="coffee" style={{fontSize: 25}} /> {matches}% Match!
           </Text>
         </View>
       )}
@@ -108,7 +99,7 @@ const CardItem = ({
       {/*SKILLS*/}
       <View style={localStyles.container}>
         <View style={localStyles.fixToText}>
-          {skills.map(item => (
+          { skills.map((item) => (
             <Text style={localStyles.signupText}>
               {item}
               <Emoji name="white_check_mark" style={{ fontSize: 15 }} />
@@ -116,30 +107,16 @@ const CardItem = ({
           ))}
         </View>
       </View>
-      <View style={localStyles.container}>
-        <Text />
-      </View>
-      <View>
-        <TouchableOpacity>
-          <SocialIcon button light type="github" style={styles.button} />
-        </TouchableOpacity>
-      </View>
-
-      <View>
-        <TouchableOpacity>
-          <SocialIcon button light type="linkedin" style={styles.button} />
-        </TouchableOpacity>
-      </View>
 
       {/* DESCRIPTION */}
       {description && (
-        <Text style={localStyles.descriptionCardItem}>{description}</Text>
+        <Text style={styles.descriptionCardItem}>{description}</Text>
       )}
 
       {/* STATUS */}
       {status && (
         <View style={styles.status}>
-          <View style={status === "Online" ? styles.online : styles.offline} />
+          <View style={status === 'Online' ? styles.online : styles.offline} />
           <Text style={styles.statusText}>{status}</Text>
         </View>
       )}
@@ -149,7 +126,7 @@ const CardItem = ({
         <View style={styles.actionsCardItem}>
           <TouchableOpacity style={styles.button} onPress={() => onPressLeft()}>
             <Text style={styles.like}>
-              <Emoji name="heart" style={{ fontSize: 30 }} />
+              <Emoji name="heart" style={{fontSize: 30}} />
             </Text>
           </TouchableOpacity>
 
@@ -158,10 +135,7 @@ const CardItem = ({
             onPress={() => onPressRight()}
           >
             <Text style={styles.dislike}>
-              <Emoji
-                name="negative_squared_cross_mark"
-                style={{ fontSize: 30 }}
-              />
+              <Emoji name="negative_squared_cross_mark" style={{fontSize: 30}} />
             </Text>
           </TouchableOpacity>
         </View>
@@ -172,34 +146,34 @@ const CardItem = ({
 
 const localStyles = StyleSheet.create({
   fixToText: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: AppStyles.buttonWidth.main / 4,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: AppStyles.buttonWidth.main/4,
     backgroundColor: AppStyles.color.tint,
     borderRadius: AppStyles.borderRadius.main,
-    height: 30
+    padding: 5,
+    marginRight: 20,
   },
   signupText: {
     color: "white"
   },
   container: {
     flex: 1,
-    marginTop: Constants.statusBarHeight,
+    marginTop: 5,
     marginHorizontal: 16,
-    margin: 10
   },
-  descriptionCardItem: {
-    position: "relative",
-    flexDirection: "row",
-    justifyContent: "center",
-    width: AppStyles.buttonWidth.main / 4,
-    fontSize: 12,
-    padding: 10,
-    borderWidth: 1,
-    borderRadius: AppStyles.borderRadius.main,
-    marginTop: 40,
-    marginRight: 25
-  }
-});
+  containerCardItem: {
+		backgroundColor: "white",
+		borderRadius: 8,
+		alignItems: "center",
+		margin: 10,
+		shadowOpacity: 0.05,
+		shadowRadius: 10,
+		shadowColor: "black",
+		shadowOffset: { height: 0, width: 0 },
+    width: 330,
+    height: 550
+	},
+})
 
 export default CardItem;

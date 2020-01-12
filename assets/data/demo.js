@@ -16,10 +16,10 @@ module.exports = [
 		name: 'Tony Shen',
 		match: '93',
 		description:
-			'i lik bookes!!',
+			'I would like to make the world a better place',
 		status: 'Offline',
 		message: "Someone like you. Someone who'll rattle the cages.",
-    skills: [],
+    skills: ["React Native", "Machine Learning"],
 		image: require('../images/02.jpg')
 	},
 	{
@@ -32,18 +32,18 @@ module.exports = [
 		message:
 			'Oh, hee-hee, aha. Ha, ooh, hee, ha-ha, ha-ha. And I thought my jokes were bad.',
     skills: ["Python", "Java"],
-		image: require('../images/03.jpg')
+		image: require('../images/crab.jpg')
 	},
 	{
 		id: 4,
-		name: '',
+		name: 'Augustine Jeong',
 		match: '88',
 		description:
 			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
 		status: 'Online',
 		message: "Bats frighten me. It's time my enemies shared my dread.",
     skills: ["Python", "Java"],
-		image: require('../images/04.jpg')
+		image: require('../images/10.jpg')
 	},
 	{
 		id: 5,
@@ -112,7 +112,7 @@ module.exports = [
 	},
 	{
 		id: 10,
-		name: 'Kurtis DuBuque',
+		name: 'Mr. Clean',
 		match: '98',
 		description:
 			'Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.',
@@ -120,6 +120,6 @@ module.exports = [
 		message:
 			'You want order in Gotham. Batman must take off his mask and turn himself in.',
     skills: ["Python", "Java"],
-		image: require('../images/10.jpg')
+		image: require('../images/clean.jpg')
 	}
 ];
