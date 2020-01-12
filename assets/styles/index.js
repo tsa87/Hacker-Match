@@ -88,7 +88,9 @@ export default StyleSheet.create({
 	},
 	descriptionCardItem: {
 		color: GRAY,
-		textAlign: "center"
+		textAlign: "center",
+    flexDirection:"column",
+    position:"static",
 	},
 	status: {
 		paddingBottom: 10,

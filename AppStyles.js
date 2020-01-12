@@ -57,9 +57,14 @@ export const AppIcon = {
     tintColor: AppStyles.color.tint,
     width: 25,
     height: 25
-  },
+  }, 
   
-
+  images: {
+    home: require("./assets/icons/home@1x.png"),
+    defaultUser: require("./assets/icons/default_user@1x.jpg"),
+    logout: require("./assets/icons/shutdown@1x.png")
+  }
+  
 };
 
 export const HeaderButtonStyle = StyleSheet.create({
